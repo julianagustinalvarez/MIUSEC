@@ -19,6 +19,7 @@ export default class Artista extends React.Component {
     }
 
     render(){
+        const esto = this;
         return(
             <div className="row py-3 ">
                         <div className="col-12 d-flex align-items-center">
