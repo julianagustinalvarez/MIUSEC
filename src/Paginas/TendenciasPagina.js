@@ -26,7 +26,7 @@ export default class TendenciasPagina  extends React.Component {
     render() {
         return (
             <>
-            <h1>Lanzamientos de Mac Miller</h1>
+            <h2>Lanzamientos de Mac Miller</h2>
             <div className=" p-5 col-12 d-fluid align-items-center">
               <div className="row">{this.state.lanzamientos.map((lanzamiento) => (
                 <ul> <li className="">{lanzamiento.title} ({lanzamiento.date})</li></ul >
