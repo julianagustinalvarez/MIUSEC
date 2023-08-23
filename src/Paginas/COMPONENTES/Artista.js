@@ -2,7 +2,6 @@ import React from "react";
 import './Artista.css';
 
 export default class Artista extends React.Component {
-
     constructor(props){
         super(props);
         this.state = {
@@ -19,18 +18,25 @@ export default class Artista extends React.Component {
     }
 
     render(){
-        const esto = this;
         return(
-            <div className="row py-3 ">
-                        <div className="col-12 d-flex align-items-center">
-                        <img src={this.props.img} alt={this.props.nombre} className="band-thumb"  />
-                        <div className="pl-5">
-                            <h2>{this.props.nombre}</h2>
-                            <p>{this.props.descripcion}</p>
-                            <button className="btn btn-danger" onClick={this.toggleEsconder}> 
+            <div className="row py-3">
+                <div className="col-12 d-flex align-items-center">
+                    {!this.state.escondido && (
+                        <img src={this.props.img} alt={this.props.nombre} className="band-thumb" />
+                    )}
+                    <div className="pl-5">
+                        {!this.state.escondido && (
+                            <div>
+                                <h2>{this.props.nombre}</h2>
+                                <p>{this.props.descripcion}</p>
+                            </div>
+                        )}
+                        <button className="btn btn-danger" onClick={this.toggleEsconder}> 
                             {this.state.escondido ? "Mostrar" : "Esconder" } 
-                            </button>
-                        </div>
+                        </button>
                     </div>
                 </div>
-)}}
+            </div>
+        );
+    }
+}
