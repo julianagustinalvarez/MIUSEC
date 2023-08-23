@@ -1,0 +1,6 @@
+.band-thumb {
+    max-width: 350px ;
+    border-radius: 15px ;
+    min-width: 300px;
+    max-height: 300px;
+}
